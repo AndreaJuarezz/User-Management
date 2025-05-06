@@ -88,7 +88,7 @@ export default function Home() {
 
       <footer className="bg-white dark:bg-gray-800 py-4 mt-auto border-t dark:border-gray-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500 dark:text-gray-400">
-          © {new Date().getFullYear()} Todos los derechos
+          © {new Date().getFullYear()} Creado por Andrea Guadalupe Juarez Nava. Todos los derechos
           reservados.
         </div>
       </footer>
