@@ -1,0 +1,28 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" 
+  url      = env("DATABASE_URL") 
+}
+
+// Enum para los roles de usuario
+enum Role {
+  ADMIN
+  USER
+}
+
+// Modelo para la tabla de Usuarios
+model User {
+  id        String   @id @default(uuid()) 
+  name      String                        
+  email     String   @unique               
+  password  String                         
+  role      Role     @default(USER)       
+  createdAt DateTime @default(now())      
+  updatedAt DateTime @updatedAt           
+
+}
